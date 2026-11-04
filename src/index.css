@@ -1,0 +1,1121 @@
+/* =========================================================
+   LUMÉ — GLOBAL DESIGN SYSTEM
+   Modern Luxury Fashion
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+:root {
+  /* ===== COLORS ===== */
+  --background: #f8f5f0;
+  --surface: #ffffff;
+  --surface-soft: #f1ece5;
+
+  --primary: #1c1917;
+  --primary-light: #332e2a;
+
+  --accent: #b89b72;
+  --accent-dark: #987b55;
+  --accent-soft: #e8ddcd;
+
+  --text: #211e1b;
+  --text-light: #4f4943;
+  --muted: #817870;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --border: #e4ddd4;
+  --border-dark: #d2c8bc;
+
+  --success: #4f765d;
+  --danger: #a65353;
+
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 2px 10px rgba(28, 25, 23, 0.05);
+  --shadow-md: 0 8px 30px rgba(28, 25, 23, 0.08);
+  --shadow-lg: 0 18px 50px rgba(28, 25, 23, 0.12);
+
+  /* ===== RADIUS ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* ===== TRANSITIONS ===== */
+  --transition: 0.3s ease;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family:
+    "DM Sans",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  background: var(--background);
+  color: var(--text);
+
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  color: var(--primary);
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+h1,
+h2 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-light);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button img,
+a img {
+  display: block;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-dark);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
+.container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+  padding: 90px 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.section-subtitle {
+  max-width: 620px;
+  margin: 16px auto 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* =========================================================
+   PREMIUM BUTTONS
+========================================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 13px 28px;
+
+  background: var(--primary);
+  color: var(--white);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 27px;
+
+  background: transparent;
+  color: var(--primary);
+
+  border: 1px solid var(--primary);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   CARD FOUNDATION
+========================================================= */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-soft);
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.3s ease;
+}
+
+.product-image-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 10px;
+
+  background: var(--primary);
+  color: var(--white);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.badge-gold {
+  background: var(--accent);
+}
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+.form-input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.form-input::placeholder {
+  color: var(--muted);
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(184, 155, 114, 0.12);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+/* =========================================================
+   LUXURY HERO TYPOGRAPHY
+========================================================= */
+
+/* =========================================================
+   LUMÉ — HERO SECTION
+========================================================= */
+
+.hero {
+  min-height: calc(100vh - 80px);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: var(--background);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px 8vw;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* Small luxury label */
+
+.hero-label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--accent);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* Season text */
+
+.hero-subtitle {
+  margin-bottom: 24px;
+
+  color: var(--muted);
+
+  font-size: 0.7rem;
+  font-weight: 500;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Main heading */
+
+.hero-title {
+  max-width: 750px;
+
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  color: var(--primary);
+
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+}
+
+.hero-title em {
+  font-style: italic;
+
+  color: var(--accent-dark);
+}
+
+/* Description */
+
+.hero-description {
+  max-width: 500px;
+
+  margin-top: 30px;
+  margin-bottom: 36px;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-button {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  padding: 15px 28px;
+
+  background: var(--primary);
+  color: var(--white);
+
+  border: 1px solid var(--primary);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-button span {
+  font-size: 1.1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  transform: translateY(-3px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.hero-button:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+  position: relative;
+
+  min-height: 650px;
+
+  overflow: hidden;
+
+  background: var(--surface-soft);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 1s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   IMAGE LABEL
+========================================================= */
+
+.hero-image-label {
+  position: absolute;
+
+  bottom: 28px;
+  right: 28px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 14px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  backdrop-filter: blur(10px);
+
+  color: var(--primary);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.hero-image-label span:first-child {
+  color: var(--accent);
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 1rem;
+}
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.hero-content::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 45px;
+  height: 1px;
+
+  background: var(--accent);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    min-height: 600px;
+
+    padding: 70px 8vw;
+  }
+
+  .hero-image {
+    min-height: 600px;
+  }
+
+  .hero-content::before {
+    display: none;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero-content {
+    min-height: auto;
+
+    padding: 80px 24px 60px;
+  }
+
+  .hero-label {
+    font-size: 0.6rem;
+
+    letter-spacing: 0.2em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.62rem;
+
+    margin-bottom: 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+
+    line-height: 1;
+  }
+
+  .hero-description {
+    margin-top: 24px;
+    margin-bottom: 30px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+  }
+
+  .hero-button {
+    width: 100%;
+
+    padding: 16px 20px;
+  }
+
+  .hero-image {
+    min-height: 500px;
+  }
+
+  .hero-image-label {
+    right: 18px;
+    bottom: 18px;
+  }
+
+}/* =========================================================
+   LUMÉ — NAVBAR
+   Luxury Fashion Navigation
+========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(243, 238, 231, 0.94);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-container {
+  width: min(1280px, calc(100% - 60px));
+
+  min-height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  flex-shrink: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  color: var(--primary);
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--accent-dark);
+
+  transform: translateY(-1px);
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  
+}
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  margin-left: auto;
+}
+
+.nav-links a {
+  position: relative;
+
+  padding: 8px 0;
+
+  color: var(--text-light);
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--accent);
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   NAV ACTIONS
+========================================================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.nav-actions > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-actions > a:hover {
+  color: var(--accent-dark);
+
+  transform: translateY(-2px);
+}
+
+/* Wishlist + Cart */
+
+.nav-actions > a:not(.login-link) {
+  width: 36px;
+  height: 36px;
+
+  font-size: 1.35rem;
+}
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-link {
+  padding: 10px 19px;
+
+  border: 1px solid var(--primary);
+
+  color: var(--primary) !important;
+
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease !important;
+}
+
+.login-link:hover {
+  background: var(--primary);
+
+  border-color: var(--primary);
+
+  color: var(--white) !important;
+
+  transform: none !important;
+}
+
+.login-link::after {
+  display: none;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar-container {
+    width: min(100% - 36px, 1280px);
+
+    min-height: 74px;
+
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.65rem;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .navbar-container {
+    min-height: 70px;
+
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.55rem;
+
+    letter-spacing: 0.08em;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+
+    gap: 6px;
+  }
+
+  .nav-actions > a:not(.login-link) {
+    width: 34px;
+    height: 34px;
+
+    font-size: 1.2rem;
+  }
+
+  .login-link {
+    padding: 8px 13px;
+
+    font-size: 0.6rem !important;
+  }
+
+}
+
+/* KIDIST expandable product search */
+.navbar {
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-search-panel {
+  position: absolute;
+  top: 100%;
+  right: 5%;
+  width: min(480px, 90vw);
+  background: #fffdf9;
+  border: 1px solid #e7ded1;
+  box-shadow: 0 12px 35px rgba(43, 36, 36, 0.12);
+  padding: 20px;
+  z-index: 200;
+}
+
+.navbar-search-form {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #d8cbbb;
+  background: #fff;
+  color: #2b2424;
+  font: inherit;
+  outline: none;
+}
+
+.navbar-search-form input:focus {
+  border-color: #b9915b;
+}
+
+.navbar-search-form button {
+  padding: 12px 20px;
+  border: 1px solid #b9915b;
+  background: #b9915b;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.navbar-search-form button:hover {
+  background: #927044;
+}
+
+.search-close-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.search-suggestions {
+  margin-top: 12px;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.search-suggestion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee7de;
+  text-decoration: none;
+  color: #2b2424;
+}
+
+.search-suggestion:last-child {
+  border-bottom: none;
+}
+
+.search-suggestion img {
+  width: 52px;
+  height: 62px;
+  object-fit: cover;
+  background: #f5f0e9;
+}
+
+.search-suggestion > span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.search-suggestion > span strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.search-suggestion small {
+  color: #8b7b69;
+  font-size: 12px;
+}
+
+.search-suggestion > strong {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.search-suggestion:hover {
+  background: #f8f3ec;
+}
+
+.search-no-results {
+  padding: 12px 0;
+  color: #776b60;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .navbar-search-panel {
+    right: 5%;
+    width: 90%;
+    padding: 14px;
+  }
+
+  .navbar-search-form button {
+    padding: 12px;
+  }
+}

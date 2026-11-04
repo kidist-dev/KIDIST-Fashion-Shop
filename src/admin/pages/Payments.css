@@ -1,0 +1,250 @@
+
+.admin-payments {
+  padding: 32px;
+  color: #2b2424;
+  background: #fff9f7;
+  min-height: 100vh;
+}
+
+.payments-header {
+  margin-bottom: 28px;
+}
+
+.payments-eyebrow {
+  color: #a78651;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.payments-header h1 {
+  margin: 8px 0;
+  font-family: Georgia, serif;
+}
+
+.payment-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.payment-stat,
+.admin-payment-section,
+.bank-card,
+.transfer-card {
+  background: #fff;
+  border: 1px solid #eadfdb;
+  border-radius: 14px;
+}
+
+.payment-stat {
+  padding: 20px;
+}
+
+.payment-stat span {
+  display: block;
+  color: #756966;
+  font-size: 14px;
+}
+
+.payment-stat strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 26px;
+}
+
+.admin-payment-section {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.section-heading,
+.transfer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0 0 6px;
+}
+
+.section-heading p,
+.bank-card p,
+.transfer-card p {
+  color: #756966;
+  overflow-wrap: anywhere;
+}
+
+.admin-payment-btn,
+.bank-card-actions button,
+.transfer-actions button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-payment-btn {
+  background: #c9a66b;
+  color: #2b2424;
+}
+
+.bank-form {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #fff9f7;
+  border-radius: 12px;
+}
+
+.bank-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.bank-form input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d9ceca;
+  border-radius: 8px;
+  background: white;
+}
+
+.bank-form .bank-active-field {
+  display: flex;
+  align-items: center;
+}
+
+.bank-list {
+  display: grid;
+  gap: 14px;
+}
+
+.bank-card,
+.transfer-card {
+  padding: 20px;
+}
+
+.bank-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.bank-card h3,
+.transfer-card h3 {
+  margin-top: 0;
+}
+
+.bank-card-actions,
+.transfer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bank-card-actions button {
+  background: #f4eeea;
+  color: #2b2424;
+}
+
+.bank-card-actions .delete-bank-btn,
+.reject-payment-btn {
+  background: #f8e6e4;
+  color: #8b2828;
+}
+
+.payment-status {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status-approved {
+  background: #e3f3e7;
+  color: #23663a;
+}
+
+.status-rejected {
+  background: #f8e6e4;
+  color: #8b2828;
+}
+
+.transfer-card {
+  margin-bottom: 14px;
+}
+
+.transfer-header {
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.transfer-header > strong {
+  white-space: nowrap;
+}
+
+.approve-payment-btn {
+  background: #e3f3e7;
+  color: #23663a;
+}
+
+.receipt-link {
+  display: inline-block;
+  margin: 8px 0 16px;
+  color: #8b6a37;
+  text-decoration: underline;
+}
+
+.payments-message {
+  padding: 12px 16px;
+  background: #e3f3e7;
+  border-radius: 8px;
+}
+
+.payments-empty {
+  padding: 24px;
+  color: #756966;
+  text-align: center;
+  background: #fff9f7;
+  border-radius: 10px;
+}
+
+.payments-warning {
+  color: #8b2828;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .admin-payments {
+    padding: 16px;
+  }
+
+  .payment-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading,
+  .bank-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .bank-card-actions button,
+  .transfer-actions button {
+    flex: 1;
+  }
+}

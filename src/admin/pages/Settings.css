@@ -1,0 +1,135 @@
+
+.admin-settings {
+  padding: 28px;
+  color: #2b2424;
+}
+
+.settings-heading {
+  margin-bottom: 26px;
+}
+
+.settings-eyebrow {
+  color: #b28a55;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.settings-heading h1 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.settings-heading > p:last-child,
+.settings-section > p {
+  color: #827777;
+}
+
+.settings-section {
+  margin-bottom: 22px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #eee3e0;
+  border-radius: 12px;
+}
+
+.settings-section h2 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.settings-section > p {
+  margin-bottom: 22px;
+  font-size: 13px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.settings-grid label {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.settings-grid input,
+.settings-grid select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #e5d8d5;
+  border-radius: 8px;
+  background: #fff;
+  color: #2b2424;
+  font: inherit;
+}
+
+.store-open-setting {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.store-open-setting input {
+  margin-top: 4px;
+  accent-color: #b28a55;
+}
+
+.store-open-setting span,
+.store-open-setting small {
+  display: block;
+}
+
+.store-open-setting small {
+  margin-top: 5px;
+  color: #827777;
+  font-size: 12px;
+}
+
+.settings-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.settings-actions button {
+  padding: 13px 22px;
+  border: 0;
+  border-radius: 8px;
+  background: #c9a66b;
+  color: #2b2424;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-actions p {
+  color: #6f624d;
+  font-size: 13px;
+}
+
+.settings-warning {
+  margin-top: 22px;
+  color: #827777;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .admin-settings {
+    padding: 16px;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-section {
+    padding: 18px;
+  }
+}
